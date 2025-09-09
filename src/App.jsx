@@ -189,94 +189,100 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-24 pb-20 bg-gray-50">
-        <div className="max-w-[95rem] mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <h1 className="text-7xl font-black text-gray-900 mb-6">
-                We Care
-              </h1>
-              <div className="w-24 h-1 bg-blue-600 mb-6 mx-auto lg:mx-0"></div>
-            </motion.div>
+     <section id="home" className="pt-24 pb-20 bg-gray-50">
+  <div className="max-w-[95rem] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    {/* Left Content */}
+    <div className="text-center lg:text-left">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+          We Care
+        </h1>
+        <div className="w-24 h-1 bg-blue-600 mb-8 mx-auto lg:mx-0"></div>
+      </motion.div>
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.2}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <p className="text-2xl text-gray-700 mb-4">
-              Newcastle Veterinary Clinic is a trusted small animal practice
-              </p>
-              <p className="text-2xl text-blue-600 font-semibold">
-                with over 12 years of proven experience in compassionate,
-              </p>
-              <br />
-               high-quality veterinary care.
-            </motion.div>
+      <motion.div
+        variants={fadeUp}
+        custom={0.2}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <p className="text-xl md:text-2xl text-gray-700 mb-3">
+          Newcastle Veterinary Clinic is a trusted small animal practice
+        </p>
+        <p className="text-xl md:text-2xl text-blue-600 font-semibold mb-4">
+          with over 12 years of proven experience
+        </p>
+        <p className="text-lg text-gray-700">
+          in compassionate, high-quality veterinary care.
+        </p>
+      </motion.div>
 
-            <motion.p
-              variants={fadeUp}
-              custom={0.4}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="text-lg text-gray-600 mb-12"
-            >
-              Our dedicated team is committed to delivering exceptional veterinary care,
-              guided by compassion, clinical excellence, and a genuine love for animals — because your
-              pets deserve only the best.
-            </motion.p>
+      <motion.p
+        variants={fadeUp}
+        custom={0.4}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-base md:text-lg text-gray-600 mt-8 mb-12 leading-relaxed"
+      >
+        Our dedicated team is committed to delivering exceptional veterinary care,
+        guided by compassion, clinical excellence, and a genuine love for animals —
+        because your pets deserve only the best.
+      </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.6}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition shadow-lg flex items-center gap-2">
-                Book Appointment <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
-                <div className="w-12 h-12 border-gray-200-2 border border-gray-200-gray-300 hover:border border-gray-200-blue-600 rounded-full flex items-center justify-center">
-                  <Play className="w-5 h-5" />
-                </div>
-                <span className="font-medium">Watch Our Story</span>
-              </button>
-            </motion.div>
+      {/* Buttons */}
+      <motion.div
+        variants={fadeUp}
+        custom={0.6}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
+      >
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-md flex items-center gap-2">
+          Book Appointment <ArrowRight className="w-5 h-5" />
+        </button>
+
+        <button className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition">
+          <div className="w-12 h-12 border border-gray-300 hover:border-blue-600 rounded-full flex items-center justify-center transition">
+            <Play className="w-5 h-5" />
           </div>
+          <span className="font-medium">Watch Our Story</span>
+        </button>
+      </motion.div>
+    </div>
 
-          <motion.div
-            variants={fadeUp}
-            custom={0.8}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="aspect-square bg-gray-200 rounded-3xl overflow-hidden shadow-2xl relative"
-          >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={current}
-                src={images[current]}
-                alt="Veterinary care"
-                className="w-full h-full object-cover absolute inset-0"
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-              />
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      </section>
+    {/* Right Image */}
+    <motion.div
+      variants={fadeUp}
+      custom={0.8}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="aspect-square bg-gray-100 rounded-3xl overflow-hidden shadow-xl relative"
+    >
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current}
+          src={images[current]}
+          alt="Veterinary care"
+          className="w-full h-full object-cover absolute inset-0"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.9, ease: 'easeInOut' }}
+        />
+      </AnimatePresence>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Why Choose Us Section */}
       <section id="services" className="py-20 bg-white">
