@@ -212,11 +212,10 @@ const App = () => {
               viewport={{ once: true }}
             >
               <p className="text-2xl text-gray-700 mb-4">
-                Newcastle Veterinary Clinic is a trusted small animal veterinary
-                practice
+              Newcastle Veterinary Clinic is a trusted small animal practice
               </p>
               <p className="text-2xl text-blue-600 font-semibold">
-                with more than 12 years of experience
+                with over 12 years of proven experience in compassionate, high-quality veterinary care.
               </p>
             </motion.div>
 
@@ -228,9 +227,9 @@ const App = () => {
               viewport={{ once: true }}
               className="text-lg text-gray-600 mb-12"
             >
-              Our experienced veterinary team provides the highest quality of
-              care, ensuring your beloved pets receive compassionate treatment
-              and exceptional service every visit.
+              Our dedicated team is committed to delivering exceptional veterinary care,
+              guided by compassion, clinical excellence, and a genuine love for animals — because your
+              pets deserve only the best.
             </motion.p>
 
             <motion.div
