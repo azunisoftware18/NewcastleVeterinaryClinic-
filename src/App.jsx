@@ -215,8 +215,10 @@ const App = () => {
               Newcastle Veterinary Clinic is a trusted small animal practice
               </p>
               <p className="text-2xl text-blue-600 font-semibold">
-                with over 12 years of proven experience in compassionate, high-quality veterinary care.
+                with over 12 years of proven experience in compassionate,
               </p>
+              <br />
+               high-quality veterinary care.
             </motion.div>
 
             <motion.p
